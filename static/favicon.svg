@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background orange border -->
+  <rect x="0" y="0" width="64" height="64" fill="#ff6b00"/>
+  <!-- Inner navy background -->
+  <rect x="4" y="4" width="56" height="56" fill="#0a0e2a"/>
+
+  <!-- Pixel arrow UP -->
+  <!-- arrow tip -->
+  <rect x="28" y="8"  width="8"  height="8"  fill="#ff6b00"/>
+  <!-- arrow head row 2 -->
+  <rect x="20" y="16" width="24" height="8"  fill="#ff6b00"/>
+  <!-- arrow head row 3 -->
+  <rect x="16" y="24" width="8"  height="8"  fill="#ff6b00"/>
+  <rect x="40" y="24" width="8"  height="8"  fill="#ff6b00"/>
+  <!-- arrow shaft -->
+  <rect x="24" y="32" width="16" height="16" fill="#ff6b00"/>
+  <!-- base line gold -->
+  <rect x="16" y="48" width="32" height="4"  fill="#ffaa00"/>
+
+  <!-- "LV" label -->
+  <rect x="16" y="54" width="6"  height="2"  fill="#ffaa00"/>
+  <rect x="16" y="56" width="4"  height="2"  fill="#ffaa00"/>
+  <rect x="16" y="58" width="6"  height="2"  fill="#ffaa00"/>
+
+  <rect x="26" y="54" width="2"  height="6"  fill="#ffaa00"/>
+  <rect x="28" y="58" width="2"  height="2"  fill="#ffaa00"/>
+  <rect x="30" y="54" width="2"  height="6"  fill="#ffaa00"/>
+
+  <rect x="36" y="54" width="6"  height="2"  fill="#ffaa00"/>
+  <rect x="36" y="56" width="4"  height="2"  fill="#ffaa00"/>
+  <rect x="36" y="58" width="6"  height="2"  fill="#ffaa00"/>
+
+  <rect x="46" y="54" width="2"  height="6"  fill="#ffaa00"/>
+  <rect x="48" y="56" width="2"  height="2"  fill="#ffaa00"/>
+  <rect x="46" y="58" width="6"  height="2"  fill="#ffaa00"/>
+</svg>
