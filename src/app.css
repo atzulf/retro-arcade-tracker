@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-primary:     #0a0e2a;  /* Navy gelap, background utama */
+    --color-bg-secondary:   #111640;  /* Navy medium, card/panel */
+    --color-bg-tertiary:    #1a2060;  /* Navy terang, hover state */
+    --color-accent-orange:  #ff6b00;  /* Orange arcade utama */
+    --color-accent-amber:   #ffaa00;  /* Amber/gold untuk coin & XP */
+    --color-accent-red:     #ff2244;  /* Merah untuk health/danger */
+    --color-neon-cyan:      #00e5ff;  /* Cyan untuk streak & highlight */
+    --color-neon-green:     #39ff14;  /* Neon green untuk sukses */
+    --color-text-primary:   #ffffff;  /* Putih */
+    --color-text-dim:       #7a8bbf;  /* Teks sekunder */
+    --color-border:         #2a3470;  /* Border panel */
+    --color-scanline:       rgba(0, 0, 0, 0.15); /* Efek scanline CRT */
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: 'VT323', monospace;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Press Start 2P', monospace;
+  }
+}
+
+@layer utilities {
+  /* Efek scanline CRT di atas seluruh halaman */
+  .crt-overlay::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      var(--color-scanline) 0px,
+      var(--color-scanline) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* Border gaya pixel (tidak rounded) */
+  .pixel-border {
+    border: 2px solid var(--color-accent-orange);
+    box-shadow: 0 0 0 2px var(--color-bg-primary), 0 0 0 4px var(--color-accent-orange);
+    border-radius: 0;
+  }
+
+  /* Panel/card gaya arcade */
+  .arcade-panel {
+    background: var(--color-bg-secondary);
+    border: 2px solid var(--color-border);
+    box-shadow: inset 0 0 20px rgba(255, 107, 0, 0.05),
+                0 0 10px rgba(255, 107, 0, 0.2);
+  }
+
+  /* Teks glow neon */
+  .neon-text-orange { text-shadow: 0 0 10px var(--color-accent-orange), 0 0 20px var(--color-accent-orange); }
+  .neon-text-cyan   { text-shadow: 0 0 10px var(--color-neon-cyan),   0 0 20px var(--color-neon-cyan); }
+  .neon-text-green  { text-shadow: 0 0 10px var(--color-neon-green),  0 0 20px var(--color-neon-green); }
+
+  /* Animasi blink teks arcade */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0; }
+  }
+  .animate-blink { animation: blink 1s step-start infinite; }
+
+  /* Animasi pixel pop (muncul saat dapat reward) */
+  @keyframes pixel-pop {
+    0%   { transform: scale(0) translateY(0); opacity: 1; }
+    80%  { transform: scale(1.2) translateY(-30px); opacity: 1; }
+    100% { transform: scale(1) translateY(-50px); opacity: 0; }
+  }
+  .animate-pixel-pop { animation: pixel-pop 0.8s ease-out forwards; }
+
+  /* Coin spin animation */
+  @keyframes coin-spin {
+    0%   { transform: scaleX(1); }
+    50%  { transform: scaleX(0.1); }
+    100% { transform: scaleX(1); }
+  }
+  .animate-coin-spin { animation: coin-spin 0.6s ease-in-out; }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- =============================================
+		     FAVICON SETUP — LEVL UP
+		     Taruh favicon.svg di folder: static/
+		     Path: static/favicon.svg
+		     ============================================= -->
+
+		<!-- SVG favicon (modern browsers: Chrome, Firefox, Edge) -->
+		<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
+
+		<!-- Fallback PNG untuk browser lama (Safari, IE) -->
+		<!-- Generate favicon.png dari favicon.svg di: https://realfavicongenerator.net -->
+		<!-- Lalu taruh di static/favicon.png -->
+		<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon.png" />
+
+		<!-- Apple Touch Icon (iOS home screen) -->
+		<!-- Generate apple-touch-icon.png (180x180) dari link di atas -->
+		<link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png" />
+
+		<!-- Web App Manifest (opsional, untuk PWA) -->
+		<!-- <link rel="manifest" href="%sveltekit.assets%/site.webmanifest" /> -->
+
+		<!-- Meta SEO -->
+		<title>LEVL UP — Life is an RPG</title>
+		<meta name="description" content="Habit Tracker bergaya arcade 8-bit. Ubah kebiasaan harianmu menjadi game. Kumpulkan coin, bangun streak, dan level up setiap minggu!" />
+		<meta name="theme-color" content="#ff6b00" />
+
+		<!-- Open Graph (preview saat di-share di sosmed) -->
+		<meta property="og:title" content="LEVL UP — Life is an RPG" />
+		<meta property="og:description" content="Habit Tracker bergaya arcade 8-bit. Level up hidupmu!" />
+		<meta property="og:type" content="website" />
+
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
